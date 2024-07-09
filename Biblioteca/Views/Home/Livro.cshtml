@@ -1,0 +1,30 @@
+﻿@model Livro
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<table>
+    <tr>
+        <td width="30%">
+            <div class="book-box">
+                <img src="@Model.FotoLivro" />
+            </div>
+        </td>
+        <td>
+
+            <h2 class="center"><em>Informações</em></h2>
+
+            <hr style="color: black" />
+            <h4>Nome: </h4><p>@Model.Titulo</p>
+            <h4>Autor: </h4><p>@Model.Autor.Nome</p>
+            <h4>Gênero: </h4><p>@Model.Genero.Nome</p>
+            <h4>Descrição: </h4><p>@Model.Descricao</p>
+            <hr />
+            <h5>Publicado em: </h5><p>@Model.AnoPublicacao</p>
+            <h5>Numero de páginas: </h5><p>@Model.NPaginas</p>
+        </td>
+    </tr>
+</table>
+

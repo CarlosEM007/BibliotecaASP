@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Livro>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<table border="0" width="100%" cellpadding="10">
+    <tr>
+        <td class="filtro" width="20%" valign="top">
+            <h2><em>Filtros</em></h2>
+            <div class="row">
+                <form asp-action="Index" asp-controller="Home" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Genero:</label>
+                        <h5 style="text-align:left">Genero:</h5>
+                        <select name="filtros[0]"
+                                class="form-select"
+                                asp-items="@(new SelectList(ViewBag.Genero, "IdGenero", "Nome", ViewBag.Filtros.IdGenero))">
+                            <option value="0">Todos</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Autor:</label>
+                        <h5 style="text-align:left">Autor:</h5>
+                        <select name="filtros[1]"
+                                class="form-select"
+                                asp-items="@(new SelectList(ViewBag.Autor, "IdAutor", "Nome", ViewBag.Filtros.IdAutor))">
+                            <option value="0">Todos</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-warning">Filtrar</button>
+                    <a asp-action="Index" class="btn btn-primary">Limpar</a>
+                </form>
+            </div>
+        </td>
+        <td width="80%" valign="top">
+            <h2 class="center"><em>Livros</em></h2>
+            <div class="row livro-row">
+                @foreach (var livro in Model)
+                {
+                    <div class="col-md-3 livro-box">
+                        <a asp-action="Livro" asp-controller="Home" asp-route-id="@livro.IdLivro" id="@livro.IdLivro" class="book-link">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="book-box">
+                                        <img class="book-image" src="@livro.FotoLivro" />
+                                    </div>
+                                    <h5 class="card-title center">@livro.Titulo</h5>
+                                    <p class="card-title center"><em>@livro.Autor.Nome</em></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </td>
+    </tr>
+</table>

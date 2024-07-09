@@ -1,0 +1,156 @@
+html {
+    font-size: 14px;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.footers {
+    position: absolute;
+    bottom: 0px;
+    border-top: 1px solid black;
+    text-align: center;
+    background-color: #ffc107;
+    margin-top: 100%;
+    z-index: 100;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.navbar {
+    z-index: 1030;
+    padding: 0px;
+    width: 100%;
+    position: absolute;
+}
+
+.container {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 5px;
+    padding-left: 0px;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+.center {
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-link, text-dark {
+    padding-left: 15px;
+}
+
+.skull-box {
+    margin-left: 16px;
+}
+
+.skull-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.user-box {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px black solid;
+    border-radius: 50%;
+}
+
+.filtro {
+    border-right: 1px black solid;
+}
+
+    .filtro h2 {
+        text-align: center;
+    }
+
+.livro-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.livro-row {
+    margin-left: 5px;
+}
+
+.book-box {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #fff;
+}
+
+.book-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.card {
+    width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.book-link{
+    text-decoration: none;
+}
