@@ -1,0 +1,39 @@
+﻿@model Autor
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<table>
+    <tr>
+        <td width="30%">
+            <div class="book-box">
+                <!-- Imagem do autor ou outra informação relevante -->
+            </div>
+        </td>
+        <td>
+            <h2 class="center"><em>Informações</em></h2>
+            <hr style="color: black" />
+            <h4>Nome: </h4><p>@Model.Nome</p>
+            <h4>Bibliografia: </h4><p>@Model.Bibliografia</p>
+            <h4>Nascimento: </h4><p>@Model.Nascimento.ToShortDateString()</p>
+            @if (Model.Falecimento != null)
+            {
+                <h4>Falecimento: </h4>
+
+                <p>@Model.Falecimento?.ToShortDateString()</p>
+            }
+            <hr>
+
+            <h3 class="center"><em>Livros</em></h3>
+            @foreach (var livro in Model.Livros)
+            {
+                <div class="livro-container">
+                    <img class="book-imageP" src="@livro.FotoLivro" alt="Imagem do Livro" />
+                    <p>@livro.Titulo</p>
+                </div>
+            }
+        </td>
+    </tr>
+</table>

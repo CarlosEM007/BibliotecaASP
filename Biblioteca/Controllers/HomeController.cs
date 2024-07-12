@@ -82,9 +82,26 @@ namespace Biblioteca.Controllers
             }
 
             return RedirectToAction("Index"); // Redireciona para a ação Index caso o livro não seja encontrado
-
         }
 
+        public IActionResult Usuario()
+        {
+            return View();
+        }
+
+        public IActionResult Autor(int id) 
+        {
+            var autor = _context.Livros
+            .Include(a => a.Autor)
+            .FirstOrDefault(a => a.IdAutor == id);
+
+            if (autor == null)
+            {
+                return NotFound();
+            }
+
+            return View(autor);
+        }
 
         public IActionResult Privacy()
         {
