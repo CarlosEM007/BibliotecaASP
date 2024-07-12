@@ -12,7 +12,7 @@ namespace Biblioteca.Models
         public string Bibliografia { get; set; }
         [Required(ErrorMessage = "Campo Necessário!")]
         public DateTime Nascimento { get; set; }
-        
+        public string FotoAutor { get; set; } = string.Empty;
         public DateTime? Falecimento { get; set; }
     }
 }

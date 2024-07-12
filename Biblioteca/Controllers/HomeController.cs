@@ -64,50 +64,6 @@ namespace Biblioteca.Controllers
             return RedirectToAction("Index", new { filtros = filtros });
         }
 
-        public IActionResult Livro(int id)
-        {
-
-            if (id != null)
-            {
-                // Faz uma consulta usando "Include" para obter o autor e gênero associados ao livro
-                Livro livro = _context.Livros
-                    .Include(a => a.Autor)
-                    .Include(g => g.Genero)
-                    .FirstOrDefault(l => l.IdLivro == id);
-
-                if (livro != null)
-                {
-                    return View(livro); // Passa o modelo livro para a view
-                }
-            }
-
-            return RedirectToAction("Index"); // Redireciona para a ação Index caso o livro não seja encontrado
-        }
-
-        public IActionResult Usuario()
-        {
-            return View();
-        }
-
-        public IActionResult Autor(int id) 
-        {
-            var autor = _context.Livros
-            .Include(a => a.Autor)
-            .FirstOrDefault(a => a.IdAutor == id);
-
-            if (autor == null)
-            {
-                return NotFound();
-            }
-
-            return View(autor);
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

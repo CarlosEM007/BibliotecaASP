@@ -42,7 +42,7 @@
                 @foreach (var livro in Model)
                 {
                     <div class="col-md-3 livro-box">
-                        <a asp-action="Livro" asp-controller="Home" asp-route-id="@livro.IdLivro" id="@livro.IdLivro" class="book-link">
+                        <a asp-action="Livro" asp-controller="Infos" asp-route-id="@livro.IdLivro" id="@livro.IdLivro" class="book-link">
                             <div class="card mb-3">
                                 <div class="card-body">
                                     <div class="book-box">

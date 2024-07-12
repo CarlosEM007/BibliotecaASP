@@ -18,7 +18,7 @@
 
             <hr style="color: black"/>
             <h4>Nome: </h4><p>@Model.Titulo</p>
-            <h4>Autor: </h4><a asp-area="" asp-controller="Home" asp-route-id="@Model.Autor.IdAutor" id="@Model.Autor.IdAutor" asp-action="Autor"><p>@Model.Autor.Nome</p></a>
+            <h4>Autor: </h4><a asp-action="Autor" asp-area="" asp-controller="Infos" asp-route-id="@Model.Autor.IdAutor" id="@Model.Autor.IdAutor"><p>@Model.Autor.Nome</p></a>
             <h4>Gênero: </h4><p>@Model.Genero.Nome</p>
             <h4>Descrição: </h4><p>@Model.Descricao</p>
             <hr />
