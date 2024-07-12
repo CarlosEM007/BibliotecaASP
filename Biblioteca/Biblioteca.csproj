@@ -47,8 +47,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Home\Autor.cshtml" />
-    <None Include="Views\Home\Usuario.cshtml" />
+    <None Include="Views\Infos\Autor.cshtml" />
+    <None Include="Views\Infos\Usuario.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

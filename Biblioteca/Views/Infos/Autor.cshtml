@@ -1,0 +1,32 @@
+﻿@model Livro
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<table>
+    <tr>
+        <td style="border" width="30%" >
+            <div class="book-box">
+                <img class="autor-image" src="@Model.Autor.FotoAutor" />
+            </div>
+        </td>
+        <td>
+            <h2 class="center"><em>Informações</em></h2>
+            <hr style="color: black" />
+            <h4>Nome: </h4><p>@Model.Autor.Nome</p>
+            <h4>Bibliografia: </h4><p>@Model.Autor.Bibliografia</p>
+            <h4>Nascimento: </h4><p>@Model.Autor.Nascimento.ToShortDateString()</p>
+            @if (Model.Autor.Falecimento != null)
+            {
+                <h4>Falecimento: </h4>
+
+                <p>@Model.Autor.Falecimento?.ToShortDateString()</p>
+            }
+            <hr>
+
+            <h3 class="center"><em>Livros</em></h3>
+        </td>
+    </tr>
+</table>
