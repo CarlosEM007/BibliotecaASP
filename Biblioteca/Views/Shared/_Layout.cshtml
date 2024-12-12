@@ -26,14 +26,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
                     </ul>
                 </div>
                 <div class="user-box">
                     <div class="user-icon">
-                        <a class="user-select-all" asp-area="" asp-controller="Home" asp-action="Usuario">
+                        <a class="user-select-all" asp-area="" asp-controller="Infos" asp-action="Usuario">
                             <img class="user-icon-img" src="~/Imagens/user.png" alt="User Icon" />
                         </a>
                     </div>
@@ -47,16 +44,6 @@
             @RenderBody()
         </main>
     </div>
-
-    <!--
-    <footer class="border-top footers text-muted bg-warning">
-        <div class="container">
-            <div class="text-center">
-                &copy; 2024 - Biblioteca - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            </div>
-        </div>
-    </footer
-    -->
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

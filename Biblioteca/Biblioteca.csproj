@@ -18,6 +18,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Home\Autor.cshtml" />
+    <Content Remove="Views\Home\Usuario.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Home\Autor.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Home\Usuario.cshtml" />
     <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\darkly.css" />
   </ItemGroup>
 
@@ -33,6 +40,19 @@
     </PackageReference>
     <PackageReference Include="MySql.Data" Version="9.0.0" />
     <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Home\Usuario.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Infos\Autor.cshtml" />
+    <None Include="Views\Infos\Usuario.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Home\Autor.cshtml" />
   </ItemGroup>
 
 </Project>
